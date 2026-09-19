@@ -7,7 +7,7 @@
   <meta name="description" content="Générez en 10 secondes des fiches produits e-commerce percutantes et optimisées pour le SEO." />
   
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -27,24 +27,18 @@
   </script>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2=family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .font-mono-code {
-      font-family: 'JetBrains Mono', monospace;
-    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
     @keyframes pulse-glow {
       0%, 100% { opacity: 0.4; transform: scale(1); }
       50% { opacity: 0.8; transform: scale(1.05); }
     }
-    .animate-pulse-glow {
-      animation: pulse-glow 4s ease-in-out infinite;
-    }
+    .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
   </style>
 </head>
 
@@ -99,13 +93,13 @@
     </header>
 
     <!-- Zone principale : Formulaire & Déblocage -->
-    <main id="generator-container" class="relative">
+    <main id="generator-container" class="relative space-y-8">
 
       <!-- CARTE DU FORMULAIRE -->
       <div id="form-card" class="bg-slate-900/85 border border-slate-800/90 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative transition-all duration-300">
 
         <!-- BANNIÈRE VEROUILLÉE & GROS BOUTON STRIPE -->
-        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/80 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/85 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
           
           <div class="w-16 h-16 rounded-2xl bg-violet-950/80 border border-violet-800/80 flex items-center justify-center text-violet-400 mb-4 shadow-lg shadow-violet-950/50">
             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -113,22 +107,18 @@
             </svg>
           </div>
 
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">
-            Générateur Actuellement Verrouillé
-          </h2>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Générateur Actuellement Verrouillé</h2>
           <p class="text-slate-300 text-sm sm:text-base max-w-md mb-6 leading-relaxed">
             Obtenez un accès immédiat au générateur SEO pour rédiger vos fiches produits e-commerce haute conversion.
           </p>
 
-          <!-- ÉNORME BOUTON CENTRAL VIOLET STRIPE -->
+          <!-- ÉNORME BOUTON CENTRAL VIOLET STRIPE SÉCURISÉ -->
           <a id="btn-stripe-unlock"
-             href="#"
+             href="https://stripe.com"
              target="_blank"
              rel="noopener noreferrer"
              class="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-violet-700 hover:from-violet-500 hover:to-purple-500 shadow-xl shadow-violet-600/30 hover:shadow-violet-600/50 active:scale-[0.98] transition-all duration-200 border border-violet-400/30">
-            <span class="absolute -top-3 -right-2 bg-amber-400 text-slate-950 text-xs uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">
-              Offre Flash
-            </span>
+            <span class="absolute -top-3 -right-2 bg-amber-400 text-slate-950 text-xs uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">Offre Flash</span>
             <svg class="w-6 h-6 text-violet-200 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -143,539 +133,31 @@
           </p>
         </div>
 
-        <!-- FORMULAIRE (GRISÉ / DÉSACTIVÉ AU DÉPART) -->
-        <form id="product-form" class="space-y-6 select-none opacity-50 filter pointer-events-none transition-all duration-300">
-          
-          <!-- État du badge en haut du formulaire -->
-          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
-            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Paramètres de la fiche</span>
-            <span id="badge-status" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-rose-950/70 border border-rose-800/80 text-rose-300">
-              <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-              Accès Verrouillé
-            </span>
-          </div>
-
-          <!-- Champ 1 : Nom du produit -->
-          <div>
-            <label for="input-product-name" class="block text-sm font-semibold text-slate-200 mb-2">
-              1. Nom du produit <span class="text-violet-400">*</span>
-            </label>
-            <input type="text"
-                   id="input-product-name"
-                   name="product-name"
-                   placeholder="Ex: Gourde isotherme inox 750ml double paroi"
-                   disabled
-                   required
-                   class="w-full bg-slate-950/90 border border-slate-700/80 rounded-xl px-4 py-3.5 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors disabled:cursor-not-allowed text-sm sm:text-base" />
-          </div>
-
-          <!-- Champ 2 : 3 Mots-clés -->
-          <div>
-            <label class="block text-sm font-semibold text-slate-200 mb-2">
-              2. Trois mots-clés SEO cibles <span class="text-violet-400">*</span>
-            </label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div>
-                <input type="text"
-                       id="input-keyword-1"
-                       name="keyword-1"
-                       placeholder="Mot-clé 1 (ex: zéro déchet)"
-                       disabled
-                       required
-                       class="w-full bg-slate-950/90 border border-slate-700/80 rounded-xl px-3.5 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors disabled:cursor-not-allowed text-sm" />
-              </div>
-              <div>
-                <input type="text"
-                       id="input-keyword-2"
-                       name="keyword-2"
-                       placeholder="Mot-clé 2 (ex: garde au frais 24h)"
-                       disabled
-                       required
-                       class="w-full bg-slate-950/90 border border-slate-700/80 rounded-xl px-3.5 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors disabled:cursor-not-allowed text-sm" />
-              </div>
-              <div>
-                <input type="text"
-                       id="input-keyword-3"
-                       name="keyword-3"
-                       placeholder="Mot-clé 3 (ex: acier inoxydable)"
-                       disabled
-                       required
-                       class="w-full bg-slate-950/90 border border-slate-700/80 rounded-xl px-3.5 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors disabled:cursor-not-allowed text-sm" />
-              </div>
+        <!-- FORMULAIRE EFFECTIF -->
+        <form id="product-form" class="space-y-6 opacity-30 pointer-events-none transition-all duration-300">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Nom du produit / Niche</label>
+              <input type="text" id="p-name" required placeholder="Ex: Basket Running Confort X" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
             </div>
-            <p class="text-xs text-slate-400 mt-2">Ces mots-clés seront disséminés de façon optimale dans la balise Title, Meta description et liste à puces.</p>
-          </div>
-
-          <!-- Champ 3 : Ton de la description -->
-          <div>
-            <label class="block text-sm font-semibold text-slate-200 mb-2">
-              3. Ton de la rédaction <span class="text-violet-400">*</span>
-            </label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="tone-selector">
-              
-              <label class="relative flex items-center p-3.5 rounded-xl border border-slate-700/80 bg-slate-950/60 cursor-pointer hover:border-violet-600 transition-colors">
-                <input type="radio" name="tone" value="Professionnel" checked disabled class="accent-violet-500 h-4 w-4 text-violet-600 focus:ring-violet-500 border-slate-600">
-                <div class="ml-3">
-                  <span class="block text-sm font-medium text-slate-200">Professionnel</span>
-                  <span class="block text-xs text-slate-400">Sobre, rassurant, B2B/B2C</span>
-                </div>
-              </label>
-
-              <label class="relative flex items-center p-3.5 rounded-xl border border-slate-700/80 bg-slate-950/60 cursor-pointer hover:border-violet-600 transition-colors">
-                <input type="radio" name="tone" value="Persuasif" disabled class="accent-violet-500 h-4 w-4 text-violet-600 focus:ring-violet-500 border-slate-600">
-                <div class="ml-3">
-                  <span class="block text-sm font-medium text-slate-200">Persuasif</span>
-                  <span class="block text-xs text-slate-400">Émotion, bénéfices, urgence</span>
-                </div>
-              </label>
-
-              <label class="relative flex items-center p-3.5 rounded-xl border border-slate-700/80 bg-slate-950/60 cursor-pointer hover:border-violet-600 transition-colors">
-                <input type="radio" name="tone" value="Humoristique" disabled class="accent-violet-500 h-4 w-4 text-violet-600 focus:ring-violet-500 border-slate-600">
-                <div class="ml-3">
-                  <span class="block text-sm font-medium text-slate-200">Humoristique</span>
-                  <span class="block text-xs text-slate-400">Décalé, mémorable, jeune</span>
-                </div>
-              </label>
-
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Ton de la rédaction</label>
+              <select id="p-tone" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
+                <option value="persuasif">Persuasif & Vendeur 🔥</option>
+                <option value="seo">Ultra-Optimisé SEO 📈</option>
+                <option value="minimaliste">Épuré & Luxe ✨</option>
+              </select>
             </div>
           </div>
-
-          <!-- Bouton de soumission du formulaire -->
-          <div class="pt-2">
-            <button type="submit"
-                    id="btn-submit-generate"
-                    disabled
-                    class="w-full py-4 px-6 rounded-xl font-bold text-white bg-violet-600 hover:bg-violet-500 active:scale-[0.99] transition-all shadow-lg shadow-violet-900/40 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
-              <svg class="w-5 h-5 text-violet-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              <span>Générer ma fiche produit SEO</span>
-            </button>
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-2">3 Mots-clés importants (séparés par des virgules)</label>
+            <input type="text" id="p-keywords" required placeholder="Ex: respirant, running, durable" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
           </div>
-
+          <button type="submit" class="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-violet-600/20">
+            <span>Générer ma fiche produit SEO</span> ⚡
+          </button>
         </form>
 
-      </div>
-
-      <!-- SPINNER DE CHARGEMENT STYLÉ (2 SECONDES) -->
-      <div id="loading-spinner" class="hidden mt-8 bg-slate-900/90 border border-violet-800/60 rounded-2xl p-10 text-center backdrop-blur-xl shadow-2xl">
-        <div class="relative w-16 h-16 mx-auto mb-4">
-          <div class="w-16 h-16 rounded-full border-4 border-violet-950 border-t-violet-500 animate-spin"></div>
-          <div class="absolute inset-0 flex items-center justify-center text-violet-400">
-            <svg class="w-6 h-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-        </div>
-        <h3 id="loading-step-title" class="text-lg font-bold text-white mb-1">
-          Génération en cours...
-        </h3>
-        <p id="loading-step-subtitle" class="text-sm text-slate-400 font-mono-code">
-          Analyse sémantique et injection des mots-clés SEO...
-        </p>
-      </div>
-
-      <!-- RÉSULTAT DE LA FICHE PRODUIT SEO -->
-      <div id="result-container" class="hidden mt-8 bg-slate-900/90 border border-violet-700/50 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl shadow-violet-950/40 transition-all duration-500">
-        
-        <!-- En-tête du résultat avec Score SEO et Bouton Copier -->
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-slate-800">
-          <div class="flex items-center gap-2.5">
-            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-sm font-bold text-white uppercase tracking-wider">Fiche Produit Optimisée</span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-950 text-emerald-300 border border-emerald-800">
-              Score SEO : 98/100
-            </span>
-          </div>
-
-          <button id="btn-copy-result"
-                  type="button"
-                  class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-950 hover:bg-violet-900 text-violet-200 border border-violet-700/70 text-sm font-semibold transition-colors cursor-pointer">
-            <svg id="copy-icon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <span id="copy-text">Copier la fiche</span>
-          </button>
-        </div>
-
-        <!-- Contenu de la fiche générée -->
-        <div id="result-content" class="mt-6 space-y-6 text-slate-200 text-sm sm:text-base leading-relaxed">
-          <!-- Injecté dynamiquement par JavaScript -->
-        </div>
-
-        <!-- Bouton pour régénérer -->
-        <div class="mt-8 pt-5 border-t border-slate-800 flex justify-end">
-          <button id="btn-reset-form"
-                  type="button"
-                  class="text-xs sm:text-sm text-slate-400 hover:text-violet-300 transition-colors flex items-center gap-1.5 cursor-pointer">
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-            </svg>
-            Générer une autre variante
-          </button>
-        </div>
-
-      </div>
-
-    </main>
-
-  </div>
-
-  <!-- 3. Footer & Bouton Secret Développeur -->
-  <footer class="w-full border-t border-slate-900/80 bg-slate-950/90 py-6 mt-12">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-      
-      <p>© DescriptionFlash ⚡ — Le générateur de descriptions e-commerce rapide et percutant.</p>
-
-      <!-- Bouton secret et discret pour développeur -->
-      <button id="btn-dev-simulate"
-              type="button"
-              class="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-violet-400 bg-slate-900/80 hover:bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-md transition-all cursor-pointer opacity-70 hover:opacity-100"
-              title="Permet de déverrouiller et tester l'application sans effectuer le paiement réel">
-        <svg class="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-        <span id="dev-btn-text">Simuler le paiement (Développeur)</span>
-      </button>
-
-    </div>
-  </footer>
-
-  <!-- NOTIFICATION TOAST (MODE TEST / COPIE) -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 border border-violet-600/80 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
-    <span id="toast-icon">⚡</span>
-    <span id="toast-message" class="text-sm font-medium">Notification</span>
-  </div>
-
-  <!-- JAVASCRIPT PRINCIPAL -->
-  <script>
-    // ==========================================
-    // VARIABLE DU LIEN STRIPE (MODIFIABLE ICI)
-    // ==========================================
-    const LIEN_STRIPE = "https://buy.stripe.com/test_5kA7sW5pT0aB";
-
-    // Configuration du lien Stripe sur le bouton
-    const btnStripeUnlock = document.getElementById('btn-stripe-unlock');
-    if (btnStripeUnlock) {
-      btnStripeUnlock.href = LIEN_STRIPE;
-    }
-
-    // Éléments du DOM
-    const lockOverlay = document.getElementById('lock-overlay');
-    const productForm = document.getElementById('product-form');
-    const badgeStatus = document.getElementById('badge-status');
-    const inputProductName = document.getElementById('input-product-name');
-    const inputKeyword1 = document.getElementById('input-keyword-1');
-    const inputKeyword2 = document.getElementById('input-keyword-2');
-    const inputKeyword3 = document.getElementById('input-keyword-3');
-    const toneRadios = document.querySelectorAll('input[name="tone"]');
-    const btnSubmitGenerate = document.getElementById('btn-submit-generate');
-    const loadingSpinner = document.getElementById('loading-spinner');
-    const loadingStepSubtitle = document.getElementById('loading-step-subtitle');
-    const resultContainer = document.getElementById('result-container');
-    const resultContent = document.getElementById('result-content');
-    const btnCopyResult = document.getElementById('btn-copy-result');
-    const copyText = document.getElementById('copy-text');
-    const copyIcon = document.getElementById('copy-icon');
-    const btnResetForm = document.getElementById('btn-reset-form');
-    const btnDevSimulate = document.getElementById('btn-dev-simulate');
-    const devBtnText = document.getElementById('dev-btn-text');
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toast-message');
-    const toastIcon = document.getElementById('toast-icon');
-
-    // État de l'application
-    let isUnlocked = false;
-    let fullGeneratedTextForCopy = "";
-
-    // Afficher une notification toast
-    function showToast(message, icon = "⚡") {
-      toastMessage.textContent = message;
-      toastIcon.textContent = icon;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 3000);
-    }
-
-    // Fonction de bascule de l'état débloqué
-    function setUnlockedState(unlocked) {
-      isUnlocked = unlocked;
-
-      if (unlocked) {
-        // Masquer le bouton Stripe et le calque de verrouillage
-        lockOverlay.classList.add('hidden');
-
-        // Réactiver le formulaire
-        productForm.classList.remove('opacity-50', 'filter', 'pointer-events-none', 'select-none');
-        inputProductName.disabled = false;
-        inputKeyword1.disabled = false;
-        inputKeyword2.disabled = false;
-        inputKeyword3.disabled = false;
-        toneRadios.forEach(r => r.disabled = false);
-        btnSubmitGenerate.disabled = false;
-
-        // Mettre à jour le badge
-        badgeStatus.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-950/80 border border-emerald-700 text-emerald-300";
-        badgeStatus.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Déverrouillé (Actif)';
-
-        // Mettre à jour le bouton de simulation développeur
-        devBtnText.textContent = "Verrouiller à nouveau (Test)";
-        btnDevSimulate.classList.add('text-emerald-400', 'border-emerald-800');
-
-        showToast("Paiement validé avec succès ! Le formulaire est déverrouillé.", "🎉");
-      } else {
-        // Rétablir l'état verrouillé
-        lockOverlay.classList.remove('hidden');
-
-        // Désactiver le formulaire
-        productForm.classList.add('opacity-50', 'filter', 'pointer-events-none', 'select-none');
-        inputProductName.disabled = true;
-        inputKeyword1.disabled = true;
-        inputKeyword2.disabled = true;
-        inputKeyword3.disabled = true;
-        toneRadios.forEach(r => r.disabled = true);
-        btnSubmitGenerate.disabled = true;
-
-        // Mettre à jour le badge
-        badgeStatus.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-rose-950/70 border border-rose-800/80 text-rose-300";
-        badgeStatus.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> Accès Verrouillé';
-
-        // Mettre à jour le bouton développeur
-        devBtnText.textContent = "Simuler le paiement (Développeur)";
-        btnDevSimulate.classList.remove('text-emerald-400', 'border-emerald-800');
-
-        showToast("Mode Verrouillé réactivé.", "🔒");
-      }
-    }
-
-    // Gestion du bouton secret développeur
-    btnDevSimulate.addEventListener('click', () => {
-      setUnlockedState(!isUnlocked);
-    });
-
-    // Génération du contenu réaliste selon les paramètres
-    function generateProductSheet(productName, kw1, kw2, kw3, tone) {
-      const pName = productName.trim();
-      const k1 = kw1.trim();
-      const k2 = kw2.trim();
-      const k3 = kw3.trim();
-
-      // Variations selon le ton
-      let introPhrase = "";
-      let hook = "";
-      let ctaText = "";
-
-      if (tone === "Persuasif") {
-        hook = `Ne laissez plus la banalité gâcher votre quotidien. Découvrez comment <strong>${pName}</strong> révolutionne votre confort tout en valorisant votre engagement pour <em>${k1}</em>.`;
-        introPhrase = `Conçu spécialement pour les utilisateurs exigeants qui refusent les compromis, ce produit allie ingénierie de pointe et élégance intemporelle. Profitez d'une solution durable qui <strong>${k2}</strong> sans effort.`;
-        ctaText = `👉 Commandez votre ${pName} dès aujourd'hui et bénéficiez de l'expédition prioritaire !`;
-      } else if (tone === "Humoristique") {
-        hook = `Alerte coup de foudre : <strong>${pName}</strong> débarque pour sauver vos journées (et votre style).`;
-        introPhrase = `Fini les produits décevants qui vous lâchent au pire moment. Avec son engagement <em>${k1}</em> et son incroyable capacité pour <em>${k2}</em>, vos amis risquent fort de vouloir vous le chiper !`;
-        ctaText = `🚀 Adoptez-le avant qu'il ne soit en rupture de stock (on vous aura prévenu) !`;
-      } else {
-        // Professionnel
-        hook = `Découvrez l'excellence avec <strong>${pName}</strong>, la référence incontournable répondant aux plus hauts standards de qualité et de durabilité.`;
-        introPhrase = `Pensé pour une intégration optimale dans votre quotidien, ce modèle intègre une conception axée sur <em>${k1}</em>, assurant une fiabilité exemplaire qui <strong>${k2}</strong> au quotidien.`;
-        ctaText = `Commandez dès à présent votre ${pName} avec garantie constructeur et livraison suivie.`;
-      }
-
-      // Template HTML enrichi
-      const htmlOutput = `
-        <!-- BALISES SEO TECHNIQUES -->
-        <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 sm:p-5 space-y-3 font-mono-code text-xs sm:text-sm">
-          <div class="flex items-center justify-between text-violet-400 font-bold">
-            <span>[SEO META TAGS]</span>
-            <span class="text-xs bg-violet-950 px-2 py-0.5 rounded border border-violet-800/80">Google Preview</span>
-          </div>
-          <div>
-            <span class="text-slate-500 font-bold block">Titre SEO (Balise Title - 58 car.) :</span>
-            <span class="text-emerald-300 font-semibold">${pName} | ${k1} & ${k2}</span>
-          </div>
-          <div>
-            <span class="text-slate-500 font-bold block">Meta Description (152 car.) :</span>
-            <span class="text-slate-300">Achetez votre ${pName}. Bénéficiez d'une conception ${k3} qui ${k2}. Livraison rapide & garantie qualité ${k1}. Cliquez ici !</span>
-          </div>
-        </div>
-
-        <!-- TITRE H1 ET ACCROCHE -->
-        <div class="space-y-3">
-          <div class="inline-block text-xs uppercase tracking-wider text-violet-400 font-bold">Balise H1 Optimisée :</div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
-            ${pName} : L'alliance parfaite entre ${k1} et haute performance
-          </h2>
-          <p class="text-slate-300 text-base leading-relaxed">
-            ${hook}
-          </p>
-          <p class="text-slate-300 text-base leading-relaxed">
-            ${introPhrase}
-          </p>
-        </div>
-
-        <!-- POINTS FORTS ET BÉNÉFICES (LISTE À PUCES SEO) -->
-        <div class="bg-slate-950/50 border border-slate-800/80 rounded-xl p-5 space-y-3">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🎯</span> Pourquoi choisir ${pName} ?
-          </h3>
-          <ul class="space-y-2.5 text-slate-300 text-sm sm:text-base">
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><strong>Optimisation ${k1} :</strong> Conçu pour maximiser votre impact positif et garantir une durée de vie prolongée.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><strong>Performance certifiée :</strong> Système exclusif qui <em>${k2}</em> en toutes circonstances.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><strong>Finition ${k3} Premium :</strong> Matériaux rigoureusement sélectionnés pour résister aux aléas du quotidien.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><strong>Ergonomie intuitive :</strong> Prise en main immédiate sans configuration fastidieuse.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- CALL TO ACTION -->
-        <div class="p-4 rounded-xl bg-gradient-to-r from-violet-950/60 to-purple-950/60 border border-violet-800/40 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <p class="text-sm font-bold text-white">Prêt à transformer votre expérience ?</p>
-            <p class="text-xs text-slate-400">${ctaText}</p>
-          </div>
-          <span class="px-4 py-2 rounded-lg bg-violet-600 text-white font-bold text-xs uppercase tracking-wider shadow">
-            Ajouter au panier
-          </span>
-        </div>
-
-        <!-- HASHTAGS & MOTS-CLÉS LSI -->
-        <div class="pt-2 text-xs text-slate-400 font-mono-code flex flex-wrap gap-2">
-          <span class="text-slate-500 font-bold">Mots-clés LSI & Tags :</span>
-          <span class="bg-slate-800/70 text-violet-300 px-2 py-0.5 rounded">#${k1.replace(/\s+/g, '')}</span>
-          <span class="bg-slate-800/70 text-violet-300 px-2 py-0.5 rounded">#${k2.replace(/\s+/g, '')}</span>
-          <span class="bg-slate-800/70 text-violet-300 px-2 py-0.5 rounded">#${k3.replace(/\s+/g, '')}</span>
-          <span class="bg-slate-800/70 text-slate-300 px-2 py-0.5 rounded">#Ecommerce</span>
-          <span class="bg-slate-800/70 text-slate-300 px-2 py-0.5 rounded">#Tendance</span>
-          <span class="bg-slate-800/70 text-slate-300 px-2 py-0.5 rounded">#TopVente</span>
-        </div>
-      `;
-
-      // Version texte brut pour le presse-papier
-      fullGeneratedTextForCopy = `TITRE SEO : ${pName} | ${k1} & ${k2}
-META DESCRIPTION : Achetez votre ${pName}. Bénéficiez d'une conception ${k3} qui ${k2}. Livraison rapide & garantie qualité ${k1}.
-
-TITRE H1 : ${pName} : L'alliance parfaite entre ${k1} et haute performance
-
-ACCROCHE :
-${hook.replace(/<[^>]*>?/gm, '')}
-${introPhrase.replace(/<[^>]*>?/gm, '')}
-
-POINTS FORTS :
-- Optimisation ${k1} : Conçu pour maximiser votre impact positif et garantir une durée de vie prolongée.
-- Performance certifiée : Système exclusif qui ${k2} en toutes circonstances.
-- Finition ${k3} Premium : Matériaux rigoureusement sélectionnés.
-- Ergonomie intuitive.
-
-APPEL À L'ACTION :
-${ctaText}
-
-HASHTAGS : #${k1.replace(/\s+/g, '')} #${k2.replace(/\s+/g, '')} #${k3.replace(/\s+/g, '')} #Ecommerce #TopVente`;
-
-      return htmlOutput;
-    }
-
-    // Soumission du formulaire
-    productForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      if (!isUnlocked) {
-        showToast("Veuillez d'abord débloquer le générateur.", "🔒");
-        return;
-      }
-
-      const productName = inputProductName.value.trim();
-      const kw1 = inputKeyword1.value.trim();
-      const kw2 = inputKeyword2.value.trim();
-      const kw3 = inputKeyword3.value.trim();
-      
-      let selectedTone = "Professionnel";
-      const checkedRadio = document.querySelector('input[name="tone"]:checked');
-      if (checkedRadio) {
-        selectedTone = checkedRadio.value;
-      }
-
-      if (!productName || !kw1 || !kw2 || !kw3) {
-        showToast("Veuillez remplir le nom du produit et les 3 mots-clés.", "⚠️");
-        return;
-      }
-
-      // Masquer le résultat précédent s'il existe
-      resultContainer.classList.add('hidden');
-
-      // Afficher le spinner de chargement stylé
-      loadingSpinner.classList.remove('hidden');
-      loadingSpinner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      // Évolution du texte pendant les 2 secondes
-      setTimeout(() => {
-        loadingStepSubtitle.textContent = "Optimisation de la structure H1 et de la Meta description...";
-      }, 700);
-
-      setTimeout(() => {
-        loadingStepSubtitle.textContent = "Génération des arguments de vente persuasifs...";
-      }, 1400);
-
-      // Fin des 2 secondes : Affichage du résultat
-      setTimeout(() => {
-        loadingSpinner.classList.add('hidden');
-
-        // Génération du contenu
-        const sheetHtml = generateProductSheet(productName, kw1, kw2, kw3, selectedTone);
-        resultContent.innerHTML = sheetHtml;
-
-        // Afficher le conteneur de résultat
-        resultContainer.classList.remove('hidden');
-        resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        showToast("Fiche produit SEO générée avec succès !", "⚡");
-      }, 2000);
-    });
-
-    // Copie dans le presse-papier
-    btnCopyResult.addEventListener('click', async () => {
-      if (!fullGeneratedTextForCopy) return;
-
-      try {
-        await navigator.clipboard.writeText(fullGeneratedTextForCopy);
-        copyText.textContent = "Copié !";
-        btnCopyResult.classList.add('bg-emerald-900', 'text-emerald-200', 'border-emerald-600');
-        showToast("Fiche copiée dans le presse-papier !", "📋");
-
-        setTimeout(() => {
-          copyText.textContent = "Copier la fiche";
-          btnCopyResult.classList.remove('bg-emerald-900', 'text-emerald-200', 'border-emerald-600');
-        }, 2000);
-      } catch (err) {
-        showToast("Impossible de copier automatiquement.", "⚠️");
-      }
-    });
-
-    // Réinitialisation / Génération d'une autre variante
-    btnResetForm.addEventListener('click', () => {
-      resultContainer.classList.add('hidden');
-      productForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      inputProductName.focus();
-    });
-
-    // Pré-remplissage astucieux au premier chargement pour faciliter la démo
-    inputProductName.value = "Bouteille Isotherme Inox 750ml";
-    inputKeyword1.value = "zéro déchet";
-    inputKeyword2.value = "garde au frais 24h";
-    inputKeyword3.value = "acier inoxydable premium";
-  </script>
-</body>
-</html>
+        <!-- ZONE DE CHARGEMENT ANIMÉE -->
+        <div id="loading-spinner" class="hidden my-8 flex flex-col items-center justify-center space-y-3">
+          <div class="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
