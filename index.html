@@ -6,39 +6,17 @@
   <title>DescriptionFlash ⚡ | Générateur Flash de fiches produits SEO</title>
   <meta name="description" content="Générez en 10 secondes des fiches produits e-commerce percutantes et optimisées pour le SEO." />
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              violet: '#7c3aed',
-              'violet-light': '#8b5cf6',
-              'violet-dark': '#6d28d9',
-              'violet-glow': '#a78bfa',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS CDN Fixé et Garanti -->
+  <script src="https://unpkg.com"></script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts Corrigé -->
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2=family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .font-mono-code { font-family: 'JetBrains Mono', monospace; }
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.05); }
-    }
-    .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
   </style>
 </head>
 
@@ -46,7 +24,7 @@
 
   <!-- Arrière-plan stylisé avec halos néon subtils -->
   <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-600/15 rounded-full blur-[120px] animate-pulse-glow"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-600/15 rounded-full blur-[120px]"></div>
     <div class="absolute top-1/2 -right-40 w-[450px] h-[450px] bg-indigo-600/10 rounded-full blur-[130px]"></div>
     <div class="absolute bottom-10 -left-40 w-[500px] h-[500px] bg-purple-700/10 rounded-full blur-[140px]"></div>
   </div>
@@ -55,56 +33,38 @@
   <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-grow">
     
     <!-- 1. Header Accrocheur -->
-    <header id="header-section" class="text-center mb-10 sm:mb-12">
+    <header class="text-center mb-10 sm:mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-950/70 border border-violet-800/60 text-violet-300 text-xs sm:text-sm font-medium mb-5 shadow-inner">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
         <span>Version 2.0 • IA Spécialisée E-commerce & Conversion</span>
       </div>
       
-      <h1 id="app-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
         DescriptionFlash <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">⚡</span>
       </h1>
       
-      <p id="app-subtitle" class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
         Générez des fiches produits <span class="text-violet-300 font-semibold">100% optimisées SEO</span> en 10 secondes chrono. Boostez votre visibilité Google et convertissez chaque visiteur en acheteur.
       </p>
 
       <!-- Badges de réassurance -->
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-400">
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          Structure balisée H1 / Meta
-        </span>
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          Mots-clés LSI & Hashtags
-        </span>
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-          Accès instantané 1.99€
-        </span>
+        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Structure balisée H1 / Meta</span>
+        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Mots-clés LSI & Hashtags</span>
+        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Accès instantané 1.99€</span>
       </div>
     </header>
 
     <!-- Zone principale : Formulaire & Déblocage -->
-    <main id="generator-container" class="relative space-y-8">
+    <main class="relative space-y-8">
 
       <!-- CARTE DU FORMULAIRE -->
       <div id="form-card" class="bg-slate-900/85 border border-slate-800/90 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative transition-all duration-300">
 
         <!-- BANNIÈRE VEROUILLÉE & GROS BOUTON STRIPE -->
-        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/85 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
-          
-          <div class="w-16 h-16 rounded-2xl bg-violet-950/80 border border-violet-800/80 flex items-center justify-center text-violet-400 mb-4 shadow-lg shadow-violet-950/50">
-            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
+        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/90 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+          <div class="w-16 h-16 rounded-2xl bg-violet-950/80 border border-violet-800/80 flex items-center justify-center text-violet-400 mb-4 shadow-lg">
+            🔒
           </div>
 
           <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Générateur Actuellement Verrouillé</h2>
@@ -117,19 +77,12 @@
              href="https://stripe.com"
              target="_blank"
              rel="noopener noreferrer"
-             class="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-violet-700 hover:from-violet-500 hover:to-purple-500 shadow-xl shadow-violet-600/30 hover:shadow-violet-600/50 active:scale-[0.98] transition-all duration-200 border border-violet-400/30">
-            <span class="absolute -top-3 -right-2 bg-amber-400 text-slate-950 text-xs uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">Offre Flash</span>
-            <svg class="w-6 h-6 text-violet-200 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+             class="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-violet-700 hover:from-violet-500 hover:to-purple-500 shadow-xl active:scale-[0.98] transition-all duration-200 border border-violet-400/30">
             <span>Débloquer le Générateur (1.99€)</span>
           </a>
 
-          <p class="text-xs text-slate-400 mt-4 flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            Paiement sécurisé par Stripe • Déblocage immédiat
+          <p class="text-xs text-slate-400 mt-4">
+            💳 Paiement sécurisé par Stripe • Déblocage immédiat
           </p>
         </div>
 
@@ -153,7 +106,7 @@
             <label class="block text-sm font-medium text-slate-300 mb-2">3 Mots-clés importants (séparés par des virgules)</label>
             <input type="text" id="p-keywords" required placeholder="Ex: respirant, running, durable" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
           </div>
-          <button type="submit" class="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-violet-600/20">
+          <button type="submit" class="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
             <span>Générer ma fiche produit SEO</span> ⚡
           </button>
         </form>
@@ -161,3 +114,49 @@
         <!-- ZONE DE CHARGEMENT ANIMÉE -->
         <div id="loading-spinner" class="hidden my-8 flex flex-col items-center justify-center space-y-3">
           <div class="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
+          <p class="text-sm text-violet-400 font-medium">Rédaction de la fiche par l'IA...</p>
+        </div>
+
+        <div id="result-box" class="hidden mt-8 border-t border-slate-800 pt-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span class="text-emerald-400">✔</span> Fiche Produit Générée
+            </h3>
+            <button id="btn-copy" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Copier le texte</button>
+          </div>
+          <div id="output-text" class="bg-slate-950 border border-slate-800 rounded-xl p-5 font-mono-code text-sm text-slate-300 whitespace-pre-line leading-relaxed"></div>
+        </div>
+      </div>
+
+      <section class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 shadow-xl">
+        <h3 class="text-base font-bold text-slate-200 mb-4">
+          📊 Aperçu du résultat que vous allez obtenir :
+        </h3>
+        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800/60 font-mono-code text-xs text-slate-400 space-y-2 opacity-70">
+          <p class="text-violet-400">&lt;!-- Balisage Optimisé Google --&gt;</p>
+          <p class="text-white font-bold">&lt;h1&gt;[Titre Accrocheur Rédigé] - Confort Absolu&lt;/h1&gt;</p>
+          <p class="text-slate-300">Découvrez le produit parfait pour [Bénéfice Client]. Conçu spécifiquement pour répondre aux exigences de...</p>
+          <p class="text-emerald-400 font-semibold">✨ Points forts :</p>
+          <p class="pl-4">• ✅ Technologie innovante de régulation...</p>
+          <p class="pl-4">• ✅ Durabilité accrue testée en conditions extrêmes...</p>
+          <p class="text-blue-400">#motscles #seo #ecommerce</p>
+        </div>
+      </section>
+
+    <div class="text-center mt-8">
+      <button id="btn-dev-simulate" class="text-xs text-slate-600 hover:text-violet-400 transition underline decoration-dotted">
+        &lt;/&gt; Simuler le paiement (Développeur)
+      </button>
+    </div>
+
+    <footer class="text-center text-xs text-slate-600 mt-12 pb-6">
+      &copy; 2026 DescriptionFlash. Tous droits réservés. Produit indépendant propulsé par Gemini AI.
+    </footer>
+  </div>
+
+  <script>
+    const lockOverlay = document.getElementById('lock-overlay');
+    const productForm = document.getElementById('product-form');
+    const devBtn = document.getElementById('btn-dev-simulate');
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const resultBox = document.getElementById('result-box');
