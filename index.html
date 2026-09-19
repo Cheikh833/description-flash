@@ -6,10 +6,10 @@
   <title>DescriptionFlash ⚡ | Générateur Flash de fiches produits SEO</title>
   <meta name="description" content="Générez en 10 secondes des fiches produits e-commerce percutantes et optimisées pour le SEO." />
   
-  <!-- Tailwind CSS CDN Fixé et Garanti -->
-  <script src="https://unpkg.com"></script>
+  <!-- CDN Tailwind CSS Standard et Ultra-Stable -->
+  <script src="https://jsdelivr.net"></script>
 
-  <!-- Google Fonts Corrigé -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,135 +22,111 @@
 
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-violet-600 selection:text-white antialiased relative overflow-x-hidden">
 
-  <!-- Arrière-plan stylisé avec halos néon subtils -->
+  <!-- Arrière-plan stylisé avec halos néon -->
   <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-600/15 rounded-full blur-[120px]"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-600/20 rounded-full blur-[120px]"></div>
     <div class="absolute top-1/2 -right-40 w-[450px] h-[450px] bg-indigo-600/10 rounded-full blur-[130px]"></div>
-    <div class="absolute bottom-10 -left-40 w-[500px] h-[500px] bg-purple-700/10 rounded-full blur-[140px]"></div>
   </div>
 
   <!-- Contenu principal -->
   <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-grow">
     
-    <!-- 1. Header Accrocheur -->
-    <header class="text-center mb-10 sm:mb-12">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-950/70 border border-violet-800/60 text-violet-300 text-xs sm:text-sm font-medium mb-5 shadow-inner">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Version 2.0 • IA Spécialisée E-commerce & Conversion</span>
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-violet-800 text-violet-300 text-xs font-medium mb-4">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Version 2.0 • IA Spécialisée E-commerce</span>
       </div>
       
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
-        DescriptionFlash <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">⚡</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-3">
+        DescriptionFlash <span class="text-violet-400">⚡</span>
       </h1>
       
-      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-        Générez des fiches produits <span class="text-violet-300 font-semibold">100% optimisées SEO</span> en 10 secondes chrono. Boostez votre visibilité Google et convertissez chaque visiteur en acheteur.
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Générez des fiches produits <span class="text-violet-300 font-semibold">100% optimisées SEO</span> en 10 secondes chrono.
       </p>
-
-      <!-- Badges de réassurance -->
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-400">
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Structure balisée H1 / Meta</span>
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Mots-clés LSI & Hashtags</span>
-        <span class="flex items-center gap-1.5 bg-slate-900/70 border border-slate-800 px-3 py-1 rounded-md">✔ Accès instantané 1.99€</span>
-      </div>
     </header>
 
-    <!-- Zone principale : Formulaire & Déblocage -->
-    <main class="relative space-y-8">
+    <!-- Carte du formulaire -->
+    <main class="relative space-y-6">
+      <div id="form-card" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
 
-      <!-- CARTE DU FORMULAIRE -->
-      <div id="form-card" class="bg-slate-900/85 border border-slate-800/90 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative transition-all duration-300">
-
-        <!-- BANNIÈRE VEROUILLÉE & GROS BOUTON STRIPE -->
-        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/90 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
-          <div class="w-16 h-16 rounded-2xl bg-violet-950/80 border border-violet-800/80 flex items-center justify-center text-violet-400 mb-4 shadow-lg">
-            🔒
-          </div>
-
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Générateur Actuellement Verrouillé</h2>
-          <p class="text-slate-300 text-sm sm:text-base max-w-md mb-6 leading-relaxed">
+        <!-- LOCK OVERLAY -->
+        <div id="lock-overlay" class="absolute inset-0 z-20 bg-slate-950/90 rounded-2xl flex flex-col items-center justify-center p-6 text-center">
+          <span class="text-4xl mb-3">🔒</span>
+          <h2 class="text-xl font-bold text-white mb-2">Générateur Actuellement Verrouillé</h2>
+          <p class="text-slate-400 text-sm max-w-sm mb-6">
             Obtenez un accès immédiat au générateur SEO pour rédiger vos fiches produits e-commerce haute conversion.
           </p>
 
-          <!-- ÉNORME BOUTON CENTRAL VIOLET STRIPE SÉCURISÉ -->
           <a id="btn-stripe-unlock"
              href="https://stripe.com"
              target="_blank"
              rel="noopener noreferrer"
-             class="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-violet-700 hover:from-violet-500 hover:to-purple-500 shadow-xl active:scale-[0.98] transition-all duration-200 border border-violet-400/30">
+             class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-bold text-white bg-violet-600 hover:bg-violet-500 shadow-xl transition active:scale-95">
             <span>Débloquer le Générateur (1.99€)</span>
           </a>
-
-          <p class="text-xs text-slate-400 mt-4">
-            💳 Paiement sécurisé par Stripe • Déblocage immédiat
-          </p>
+          <p class="text-xs text-slate-500 mt-3">💳 Paiement sécurisé par Stripe</p>
         </div>
 
-        <!-- FORMULAIRE EFFECTIF -->
-        <form id="product-form" class="space-y-6 opacity-30 pointer-events-none transition-all duration-300">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- FORMULAIRE -->
+        <form id="product-form" class="space-y-4 opacity-20 pointer-events-none">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Nom du produit / Niche</label>
-              <input type="text" id="p-name" required placeholder="Ex: Basket Running Confort X" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
+              <label class="block text-xs font-medium text-slate-400 mb-1">Nom du produit / Niche</label>
+              <input type="text" id="p-name" required placeholder="Ex: Basket Running Confort X" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-violet-500">
             </div>
             <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Ton de la rédaction</label>
-              <select id="p-tone" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
+              <label class="block text-xs font-medium text-slate-400 mb-1">Ton de la rédaction</label>
+              <select id="p-tone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-violet-500">
                 <option value="persuasif">Persuasif & Vendeur 🔥</option>
                 <option value="seo">Ultra-Optimisé SEO 📈</option>
-                <option value="minimaliste">Épuré & Luxe ✨</option>
               </select>
             </div>
           </div>
           <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">3 Mots-clés importants (séparés par des virgules)</label>
-            <input type="text" id="p-keywords" required placeholder="Ex: respirant, running, durable" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-violet-500 transition">
+            <label class="block text-xs font-medium text-slate-400 mb-1">3 Mots-clés importants</label>
+            <input type="text" id="p-keywords" required placeholder="Ex: respirant, running, durable" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-violet-500">
           </div>
-          <button type="submit" class="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
-            <span>Générer ma fiche produit SEO</span> ⚡
+          <button type="submit" class="w-full bg-violet-600 hover:bg-violet-500 text-white text-sm font-bold py-2.5 px-4 rounded-lg transition shadow-lg">
+            Générer ma fiche produit SEO ⚡
           </button>
         </form>
 
-        <!-- ZONE DE CHARGEMENT ANIMÉE -->
-        <div id="loading-spinner" class="hidden my-8 flex flex-col items-center justify-center space-y-3">
-          <div class="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
-          <p class="text-sm text-violet-400 font-medium">Rédaction de la fiche par l'IA...</p>
+        <!-- SPINNER -->
+        <div id="loading-spinner" class="hidden my-6 flex flex-col items-center justify-center space-y-2">
+          <div class="w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
+          <p class="text-xs text-violet-400">Rédaction de la fiche par l'IA...</p>
         </div>
 
-        <div id="result-box" class="hidden mt-8 border-t border-slate-800 pt-6 space-y-4">
+        <!-- RESULTAT -->
+        <div id="result-box" class="hidden mt-6 border-t border-slate-800 pt-4 space-y-3">
           <div class="flex items-center justify-between">
-            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <span class="text-emerald-400">✔</span> Fiche Produit Générée
-            </h3>
-            <button id="btn-copy" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Copier le texte</button>
+            <h3 class="text-sm font-bold text-white">✔ Fiche Produit Générée</h3>
+            <button id="btn-copy" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded transition">Copier</button>
           </div>
-          <div id="output-text" class="bg-slate-950 border border-slate-800 rounded-xl p-5 font-mono-code text-sm text-slate-300 whitespace-pre-line leading-relaxed"></div>
+          <div id="output-text" class="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono-code text-xs text-slate-300 whitespace-pre-line leading-relaxed"></div>
         </div>
       </div>
 
-      <section class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 shadow-xl">
-        <h3 class="text-base font-bold text-slate-200 mb-4">
-          📊 Aperçu du résultat que vous allez obtenir :
-        </h3>
-        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800/60 font-mono-code text-xs text-slate-400 space-y-2 opacity-70">
-          <p class="text-violet-400">&lt;!-- Balisage Optimisé Google --&gt;</p>
-          <p class="text-white font-bold">&lt;h1&gt;[Titre Accrocheur Rédigé] - Confort Absolu&lt;/h1&gt;</p>
-          <p class="text-slate-300">Découvrez le produit parfait pour [Bénéfice Client]. Conçu spécifiquement pour répondre aux exigences de...</p>
-          <p class="text-emerald-400 font-semibold">✨ Points forts :</p>
-          <p class="pl-4">• ✅ Technologie innovante de régulation...</p>
-          <p class="pl-4">• ✅ Durabilité accrue testée en conditions extrêmes...</p>
-          <p class="text-blue-400">#motscles #seo #ecommerce</p>
+      <!-- APERÇU -->
+      <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl">
+        <h3 class="text-xs font-bold text-slate-400 mb-3 uppercase tracking-wider">📊 Aperçu du résultat :</h3>
+        <div class="bg-slate-950 rounded-xl p-4 border border-slate-800 font-mono-code text-xs text-slate-400 space-y-1 opacity-60">
+          <p class="text-white font-bold">&lt;h1&gt;[Titre Accrocheur Rédigé]&lt;/h1&gt;</p>
+          <p>Découvrez le produit parfait pour [Bénéfice Client]...</p>
         </div>
       </section>
 
-    <div class="text-center mt-8">
-      <button id="btn-dev-simulate" class="text-xs text-slate-600 hover:text-violet-400 transition underline decoration-dotted">
-        &lt;/&gt; Simuler le paiement (Développeur)
-      </button>
-    </div>
+      <div class="text-center">
+        <button id="btn-dev-simulate" class="text-xs text-slate-600 hover:text-violet-400 transition underline decoration-dotted">
+          &lt;/&gt; Simuler le paiement (Développeur)
+        </button>
+      </div>
+    </main>
 
-    <footer class="text-center text-xs text-slate-600 mt-12 pb-6">
-      &copy; 2026 DescriptionFlash. Tous droits réservés. Produit indépendant propulsé par Gemini AI.
+    <footer class="text-center text-xs text-slate-600 mt-10">
+      &copy; 2026 DescriptionFlash. Propulsé par Gemini AI.
     </footer>
   </div>
 
@@ -160,3 +136,60 @@
     const devBtn = document.getElementById('btn-dev-simulate');
     const loadingSpinner = document.getElementById('loading-spinner');
     const resultBox = document.getElementById('result-box');
+    const outputText = document.getElementById('output-text');
+    const btnCopy = document.getElementById('btn-copy');
+
+    function unlockApp() {
+      lockOverlay.style.opacity = '0';
+      setTimeout(() => {
+        lockOverlay.classList.add('hidden');
+        productForm.classList.remove('opacity-20', 'pointer-events-none');
+      }, 200);
+    }
+
+    devBtn.addEventListener('click', unlockApp);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get('session_id') || urlParams.get('pay') === 'success') {
+      unlockApp();
+    }
+
+    productForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      resultBox.classList.add('hidden');
+      loadingSpinner.classList.remove('hidden');
+
+      const name = document.getElementById('p-name').value;
+      const tone = document.getElementById('p-tone').value;
+      const keywords = document.getElementById('p-keywords').value;
+
+      try {
+        const response = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, tone, keywords })
+        });
+
+        const data = await response.json();
+        loadingSpinner.classList.add('hidden');
+        
+        if (data.text) {
+          resultBox.classList.remove('hidden');
+          outputText.innerText = data.text;
+        } else {
+          alert("Erreur : " + (data.error || "Vérifiez vos paramètres Vercel."));
+        }
+      } catch (error) {
+        loadingSpinner.classList.add('hidden');
+        alert("Erreur de connexion avec le serveur.");
+      }
+    });
+
+    btnCopy.addEventListener('click', function() {
+      navigator.clipboard.writeText(outputText.innerText);
+      btnCopy.innerText = "Copié !";
+      setTimeout(() => { btnCopy.innerText = "Copier"; }, 2000);
+    });
+  </script>
+</body>
+</html>
